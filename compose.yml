@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  syncplay:
+    image: driftywinds/syncplay-server:latest
+    ports:
+      - "8999:8999"
+    environment:
+      - PORT=8999
+      - PASSWORD=mypassword
+    volumes:
+      - ./motd.txt:/motd.txt
